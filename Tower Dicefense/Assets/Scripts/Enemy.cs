@@ -6,7 +6,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 	public float speed = 10f;
-
+	public Transform enemy;
 	private Transform targetWaypoint;
 	private int waypointIndex = 0;
 
@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
 
 	private void nextWaypointOrDestroy()
 	{
-		if (waypointIndex >= Waypoints.waypoints.Length -1)
+		if (waypointIndex >= Waypoints.waypoints.Length - 1)
 		{
 			Destroy(gameObject);
 			return;
