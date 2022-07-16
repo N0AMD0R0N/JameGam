@@ -3596,17 +3596,17 @@ PrefabInstance:
     - target: {fileID: 1396091702106670607, guid: 0ad9d6ccdd27e9444aa138201ae417f8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.74591
+      value: -33.74591
       objectReference: {fileID: 0}
     - target: {fileID: 1396091702106670607, guid: 0ad9d6ccdd27e9444aa138201ae417f8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1396091702106670607, guid: 0ad9d6ccdd27e9444aa138201ae417f8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 62.93808
+      value: 22.43808
       objectReference: {fileID: 0}
     - target: {fileID: 1396091702106670607, guid: 0ad9d6ccdd27e9444aa138201ae417f8,
         type: 3}
@@ -3648,6 +3648,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tower (1) Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4367077161641101363, guid: 0ad9d6ccdd27e9444aa138201ae417f8,
+        type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 5233456606357990341, guid: cdff50be5aaeded41bbbd46e67a0e5cf,
+        type: 3}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ad9d6ccdd27e9444aa138201ae417f8, type: 3}
@@ -6535,7 +6541,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfb9c6b5a6b5cca40b3bd09f86c52f48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 2197421819115247633, guid: 294a6c7766365a94797837540a6901e8, type: 3}
+  enemyPrefab: {fileID: 1528161922883437227, guid: 294a6c7766365a94797837540a6901e8,
+    type: 3}
   spawnPoint: {fileID: 2084333387}
   waveCountdownText: {fileID: 283527110}
   timeBetweenWaves: 5.5

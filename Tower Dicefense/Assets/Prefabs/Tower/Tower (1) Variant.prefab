@@ -195,12 +195,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a85dd9aae0531f40ba8e9411d86b544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 2258890499258520448}
   range: 15
   fireRate: 2
   fireCountdown: 0
+  projectilePrefab: {fileID: 804744687405380345, guid: d7e1178f28c5d314b9c5a2022b216118,
+    type: 3}
   targetEnemy: {fileID: 0}
-  towerDiceCenter: {fileID: 0}
   rangeTransform: {fileID: 1343290126155658816}
   firePoint: {fileID: 6330689221756563486}
 --- !u!1 &2258890499258520448 stripped
