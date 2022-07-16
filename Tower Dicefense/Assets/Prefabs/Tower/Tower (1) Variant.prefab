@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 15
-  fireRate: 2
+  fireRate: 1.5
   fireCountdown: 0
   projectilePrefab: {fileID: 804744687405380345, guid: d7e1178f28c5d314b9c5a2022b216118,
     type: 3}
