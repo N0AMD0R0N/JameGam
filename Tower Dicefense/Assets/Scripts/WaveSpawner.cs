@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour
 {
-	// public Transform wavedice;
+	public Transform wavedice;
 	public GameObject enemyPrefab;
 	public Transform spawnPoint;
 	public Text waveCountdownText;
@@ -28,7 +28,7 @@ public class WaveSpawner : MonoBehaviour
 	}
 	private IEnumerator SpawnWave()
 	{
-		// waveIndex++;
+		waveIndex++;
 
 		for (int i = 0; i < waveIndex; i++)
 		{

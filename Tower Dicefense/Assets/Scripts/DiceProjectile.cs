@@ -42,6 +42,7 @@ public class DiceProjectile : MonoBehaviour
 
 	private void HitTarget()
 	{
-		Debug.Log("HIT!!!");
+		Destroy(target.gameObject);
+		Destroy(gameObject);
 	}
 }
