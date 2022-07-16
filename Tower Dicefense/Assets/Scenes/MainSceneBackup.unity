@@ -24006,8 +24006,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4655559618438584d9ae93963b96aeb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diceToRoll: 3
-  dieModel: {fileID: 1693782233798157788, guid: 37a1667c7235ca54691a3627eb37e7cc,
+  diceToRoll: 9
+  dieModel: {fileID: 3251688086226284574, guid: 37a1667c7235ca54691a3627eb37e7cc,
     type: 3}
   DiceEntry: {fileID: 326896225}
   DiceEntered: {fileID: 1761954389}
