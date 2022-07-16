@@ -3912,7 +3912,7 @@ MonoBehaviour:
   enemy: {fileID: 7997469785204998424, guid: 63b34de87fb18bf49b1c442ce562a7bb, type: 3}
   spawnPoint: {fileID: 846364955}
   waveCountdownText: {fileID: 283527110}
-  timeBetweenWaves: 5.7
+  timeBetweenWaves: 5.5
 --- !u!4 &536515383
 Transform:
   m_ObjectHideFlags: 0
