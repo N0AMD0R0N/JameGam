@@ -59,6 +59,12 @@ public class Tower : MonoBehaviour
 	private void shoot()
 	{
 		GameObject projectileGO = (GameObject)Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+		DiceProjectile projectile = projectileGO.GetComponent<DiceProjectile>(); 
+
+		if(projectile != null)
+		{
+			projectile.Seek(targetEnemy);
+		}
 	}
 
 	// Update is called once per frame
