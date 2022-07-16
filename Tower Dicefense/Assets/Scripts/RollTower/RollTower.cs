@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class RollTower : MonoBehaviour, IDiceTriggerable
     public DiceEntered DiceEntered;
     public GameObject DiceExit;
     private Vector3 throwSpeed;
+    private System.Random rnd = new System.Random();
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +30,8 @@ public class RollTower : MonoBehaviour, IDiceTriggerable
     }
 
     public void onDiceEntered() {
-        GameObject obj = (GameObject)Instantiate(dieModel, DiceExit.transform.position, Quaternion.identity);;
+        var rotation = Quaternion.Euler (rnd.Next(0,360), rnd.Next(0,360), rnd.Next(0,360));
+        GameObject obj = (GameObject)Instantiate(dieModel, DiceExit.transform.position, Quaternion.identity * rotation);
         obj.GetComponent<Rigidbody>().velocity = this.throwSpeed;
     }
 }
