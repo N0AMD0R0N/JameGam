@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
 		targetWaypoint = Waypoints.waypoints[0];
 		facingDirection = (targetWaypoint.position - transform.position).normalized;
 		lookRotation = Quaternion.LookRotation(facingDirection);
-		transform.Rotate(0f, 0f, 90f); //  = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 10f);
+		transform.Rotate(0f, 0f, 0f); //  = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 10f);
     }
 
     // Update is called once per frame
