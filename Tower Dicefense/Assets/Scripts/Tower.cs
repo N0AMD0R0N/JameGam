@@ -8,15 +8,14 @@ public class Tower : MonoBehaviour
 
 	[Header("Attributes")]
 
-	public GameObject projectilePrefab;
 	public float range = 10f;
 	public float fireRate = 2f;
 	public float fireCountdown = 0f;
 
 	[Header("Unity Setup")]
 
+	public GameObject projectilePrefab;
 	public Transform targetEnemy = null;
-	public Transform towerDiceCenter;
 	public Transform rangeTransform;
 	public Transform firePoint;
 
@@ -59,7 +58,7 @@ public class Tower : MonoBehaviour
 
 	private void shoot()
 	{
-		Debug.Log("shoot");
+		GameObject projectileGO = (GameObject)Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
 	}
 
 	// Update is called once per frame
@@ -73,5 +72,13 @@ public class Tower : MonoBehaviour
 		Quaternion lookRotation = Quaternion.LookRotation(direction);
 		Vector3 rotation = lookRotation.eulerAngles;
 		firePoint.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+
+		if (fireCountdown <= 0f)
+		{
+			shoot();
+			fireCountdown = 1 / fireRate;
+		}
+
+		fireCountdown -= Time.deltaTime;
     }
 }
