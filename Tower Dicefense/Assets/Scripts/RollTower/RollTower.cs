@@ -6,7 +6,7 @@ using UnityEngine;
 public class RollTower : MonoBehaviour, IDiceTriggerable
 {
     public int diceToRoll;
-    public GameObject dieModel;
+    public ResourceDie dieModel;
     public GameObject DiceEntry;
     public DiceEntered DiceEntered;
     public GameObject DiceExit;
@@ -28,10 +28,16 @@ public class RollTower : MonoBehaviour, IDiceTriggerable
     {
         
     }
+    public void onDiceValue(int value) {
+        Debug.Log(value);
+    }
 
     public void onDiceEntered() {
         var rotation = Quaternion.Euler (rnd.Next(0,360), rnd.Next(0,360), rnd.Next(0,360));
-        GameObject obj = (GameObject)Instantiate(dieModel, DiceExit.transform.position, Quaternion.identity * rotation);
-        obj.GetComponent<Rigidbody>().velocity = this.throwSpeed;
+        ResourceDie die = (ResourceDie)Instantiate(dieModel, DiceExit.transform.position, Quaternion.identity * rotation);
+        die.GetComponent<Rigidbody>().velocity = this.throwSpeed;
+        die.onValue = this.onDiceValue;
     }
+
+    
 }
