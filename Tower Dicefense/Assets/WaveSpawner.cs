@@ -13,7 +13,7 @@ public class WaveSpawner : MonoBehaviour
 
 	public float timeBetweenWaves = 5f;
 	private float countdown = 2f;
-	private int waveIndex = 0;
+	private int waveIndex = 1;
 
 	// Update is called once per frame
 	void Update()
@@ -28,7 +28,7 @@ public class WaveSpawner : MonoBehaviour
 	}
 	private IEnumerator SpawnWave()
 	{
-		waveIndex++;
+		// waveIndex++;
 
 		for (int i = 0; i < waveIndex; i++)
 		{
