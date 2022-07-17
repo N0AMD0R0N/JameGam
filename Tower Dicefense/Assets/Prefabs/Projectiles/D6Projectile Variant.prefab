@@ -102,26 +102,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 570390170090803112}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &2144166665
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 804744687405380345}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e27018536e447cc4b84e21bac78a15c7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &6188091010966145939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,4 +114,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9aa092a3912cc1498e55d14df5db224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 35
+  speed: 50
