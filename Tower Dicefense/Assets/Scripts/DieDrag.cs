@@ -7,6 +7,7 @@ public class DieDrag : MonoBehaviour
 {
 
     public GameObject selectedDie;
+    public GameObject directionPole;
     public void Start() {
         selectedDie = null;
     }
@@ -19,9 +20,12 @@ public class DieDrag : MonoBehaviour
                     if(hit.transform.gameObject.GetComponent<ResourceDie>().stopped) {
                         selectedDie = hit.collider.gameObject;
                         Cursor.visible = false;
+                        var pole = Instantiate(directionPole, selectedDie.transform.position, Quaternion.identity);
+                        pole.transform.parent = selectedDie.transform;
                     }
                 }
             } else {
+                GameObject.Destroy(selectedDie.transform.GetChild(selectedDie.transform.childCount-1).gameObject);
                 selectedDie = null;
                 Cursor.visible = true;
             }
