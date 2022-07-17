@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DieAnchor: MonoBehaviour
 {
-    public Transform transform;
+    public Transform anchorTransform;
     public int value;
 
         // Start is called before the first frame update

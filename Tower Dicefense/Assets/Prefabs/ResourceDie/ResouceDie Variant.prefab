@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b9fd1f76e9162d48861f7cf4332b67f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transform: {fileID: 8319248924501619162}
+  anchorTransform: {fileID: 8319248924501619162}
   value: 3
 --- !u!1 &1693782233798157788
 GameObject:
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 3251688086226284574}
   m_Layer: 0
   m_Name: ResouceDie Variant
-  m_TagString: Untagged
+  m_TagString: ResourceDie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b9fd1f76e9162d48861f7cf4332b67f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transform: {fileID: 8632398412251278175}
+  anchorTransform: {fileID: 8632398412251278175}
   value: 4
 --- !u!1 &3961860096493651662
 GameObject:
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b9fd1f76e9162d48861f7cf4332b67f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transform: {fileID: 1931611824708773860}
+  anchorTransform: {fileID: 1931611824708773860}
   value: 5
 --- !u!1 &4974488568118700522
 GameObject:
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b9fd1f76e9162d48861f7cf4332b67f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transform: {fileID: 4834530061592813134}
+  anchorTransform: {fileID: 4834530061592813134}
   value: 1
 --- !u!1 &5111301082650377370
 GameObject:
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b9fd1f76e9162d48861f7cf4332b67f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transform: {fileID: 1095657246121278428}
+  anchorTransform: {fileID: 1095657246121278428}
   value: 2
 --- !u!1 &6182461277206619782
 GameObject:
@@ -448,7 +448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b9fd1f76e9162d48861f7cf4332b67f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transform: {fileID: 300641461459168606}
+  anchorTransform: {fileID: 300641461459168606}
   value: 6
 --- !u!1 &7340650509622369707
 GameObject:

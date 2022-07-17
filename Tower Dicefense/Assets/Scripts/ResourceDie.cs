@@ -8,23 +8,27 @@ public class ResourceDie : MonoBehaviour
     public int value = 0;
     public List<DieAnchor> anchors;
     public System.Action<int> onValue;
-    private Rigidbody rigidbody;   //Get this in Start()
-    private bool stopped = false;
+    public bool stopped = false;
+    private Rigidbody dieRigidbody;   //Get this in Start()
+    private BoxCollider dieCollider;   //Get this in Start()
     private int DetermineUpSide() {
-        return anchors.OrderByDescending(anchor => anchor.transform.position.y).FirstOrDefault().value;
+        return anchors.OrderByDescending(anchor => anchor.anchorTransform.position.y).FirstOrDefault().value;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        this.rigidbody = this.gameObject.GetComponent<Rigidbody>();
+        dieRigidbody = this.gameObject.GetComponent<Rigidbody>();
+        dieCollider = this.gameObject.GetComponent<BoxCollider>();
     }
 
     private void Update() {
-        if(rigidbody.velocity == Vector3.zero && !stopped) {
+        if(dieRigidbody.velocity == Vector3.zero && !stopped) {
             value = DetermineUpSide();
             stopped = true;
+            dieRigidbody.freezeRotation = true;
             onValue(value);
         }
     }
+
 }
