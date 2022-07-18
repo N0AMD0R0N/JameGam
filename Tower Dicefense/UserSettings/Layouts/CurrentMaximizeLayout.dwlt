@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 68135
+  controlID: 87181
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 68082
+  controlID: 87145
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 68066
+  controlID: 87137
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -235,7 +235,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: fc01daff0402daff4402daff4c02dafffc0adaff040bdaffc844daffd044dafffa80daff0281daffc2e5ffff36fbffff
+      m_ExpandedIDs: 1211d7ff6211d7ff9a35d7ff325ad7ff867ed7ffa087d7ffde87d7ffbe90d7ff54b5d7ff42bed7ff80bed7ffeedcd7fffc01daff0402daff4402daff4c02dafffc0adaff040bdaffc844daffd044dafffa80daff0281daff36fbffff502e0b00302f0b00
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -547,9 +547,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 5.775011, y: 1.0623121, z: 67.66235}
+    m_Target: {x: 933.4435, y: 488.6674, z: -38.860046}
     speed: 2
-    m_Value: {x: 5.775011, y: 1.0623121, z: 67.66235}
+    m_Value: {x: 933.4435, y: 488.6674, z: -38.860046}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -595,13 +595,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.22577018, y: 0.32968718, z: -0.081514865, w: 0.9130824}
+    m_Target: {x: 0.030893566, y: 0.0030009407, z: -0.00009190537, w: 0.99953425}
     speed: 2
-    m_Value: {x: 0.22576681, y: 0.32968226, z: -0.08151365, w: 0.91306883}
+    m_Value: {x: 0.030893069, y: 0.0030008925, z: -0.000091903894, w: 0.99951816}
   m_Size:
-    m_Target: 18.852755
+    m_Target: 642.43884
     speed: 2
-    m_Value: 18.852755
+    m_Value: 642.43884
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -800,7 +800,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -809,14 +809,14 @@ MonoBehaviour:
     y: 905
     width: 2040
     height: 402
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 12}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 12}
   - {fileID: 13}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -859,22 +859,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Base
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Base
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\noamd\Documents\Jam\JameGam\Tower Dicefense
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a25c0000
-    m_LastClickedID: 23714
-    m_ExpandedIDs: 000000003e5c0000405c0000425c000000ca9a3b
+    m_SelectedIDs: ba5c0000
+    m_LastClickedID: 23738
+    m_ExpandedIDs: 000000003e5c0000405c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -927,8 +927,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 5a4d0000
-    m_LastClickedInstanceID: 19802
+    m_SelectedInstanceIDs: ac890000
+    m_LastClickedInstanceID: 35244
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000105000009e5a00008a5c0000a45b0000
     m_RenameOverlay:
@@ -1048,7 +1048,7 @@ MonoBehaviour:
     m_CachedPref: 153
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 19802
+  m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0

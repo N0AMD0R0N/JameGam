@@ -5,14 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void StartGame()
+    public GameObject Defeatable;
+    public GameObject GameOverText;
+    public void Start()
     {
-        //SceneManager.LoadScene(1); // Probably going to need to change this
-        Debug.Log("Game Started");
+        GameOverText.gameObject.SetActive(false);
+        Defeatable.GetComponent<IDefeatable>().onDefeat(gameOver);
     }
-    public void QuitGame()
+    public void Update()
     {
-        Debug.Log("Game Quitted");
-        Application.Quit();
+        if(Input.GetKeyDown(KeyCode.R)) {
+            SceneManager.LoadScene("MainScene");
+            Time.timeScale = 1;
+        }
+    }
+    
+    public void gameOver() {
+        Time.timeScale = 0;
+        GameOverText.gameObject.SetActive(true);
     }
 }

@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Base : MonoBehaviour
+public class Base : MonoBehaviour, IDefeatable
 {
     private Queue<GameObject> hitDice = new Queue<GameObject>();
+    private Action lose;
 
 	// Start is called before the first frame update
 	void Start()
@@ -19,17 +20,26 @@ public class Base : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("collision!");
         if(other.transform.tag == "Enemy") {
-            if(hitDice.Count > 0) {
-                var lastDie = hitDice.Dequeue();
-                Destroy(lastDie);
+            if(hitDice.Count > 1) {
+                loseADie();
             } else {
-                Time.timeScale = 0;
+                loseADie();
+                onDefeat(null);
             }
-            Debug.Log(hitDice.Count);
+        }
+    }
+
+    private void loseADie() {
+        var lastDie = hitDice.Dequeue();
+        Destroy(lastDie);
+    }
+
+    public void onDefeat(Action defeat) {
+        if(defeat != null) {
+            lose = defeat;
         } else {
-            Debug.Log("not an enemy?");
+            lose();
         }
     }
 }
