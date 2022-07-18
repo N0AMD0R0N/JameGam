@@ -7,7 +7,9 @@ public class ResourceBox : MonoBehaviour
 {
     public TMP_Text counter;
     public int value;
+    public GameObject pile;
     private float counterDelay = 300f;
+    private int lastValue = 0;
     
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,12 @@ public class ResourceBox : MonoBehaviour
             counterDelay -= 1;
         } else if (!counter.gameObject.GetComponent<MeshRenderer>().enabled) {
             counter.gameObject.GetComponent<MeshRenderer>().enabled = true;
+        }
+        if(value != lastValue) {
+            lastValue = value;
+            for(int i = 0; i < pile.transform.childCount; i++) {
+                pile.transform.GetChild(i).gameObject.SetActive(i < value);
+            }
         }
     }
 

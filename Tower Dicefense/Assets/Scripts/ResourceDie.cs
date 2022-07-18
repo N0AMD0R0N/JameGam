@@ -7,7 +7,6 @@ public class ResourceDie : MonoBehaviour
 {
     public int value = 0;
     public List<DieAnchor> anchors;
-    public System.Action<int> onValue;
     public bool stopped = false;
     private Rigidbody dieRigidbody;   //Get this in Start()
     private BoxCollider dieCollider;   //Get this in Start()
@@ -27,7 +26,6 @@ public class ResourceDie : MonoBehaviour
             value = DetermineUpSide();
             stopped = true;
             dieRigidbody.freezeRotation = true;
-            onValue(value);
         }
     }
 

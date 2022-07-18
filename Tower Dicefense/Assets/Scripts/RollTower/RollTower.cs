@@ -18,9 +18,7 @@ public class RollTower : MonoBehaviour, IDiceTriggerable
     {
         this.throwSpeed = new Vector3(20,-20,-30);
         DiceEntered.triggerable = this;
-        for(int i = 0; i < diceToRoll; i++) {
-            Instantiate(dieModel, DiceEntry.transform.position, Quaternion.identity);
-        }
+        rollResources();
     }
 
     // Update is called once per frame
@@ -28,16 +26,17 @@ public class RollTower : MonoBehaviour, IDiceTriggerable
     {
         
     }
-    public void onDiceValue(int value) {
-        Debug.Log(value);
-    }
 
     public void onDiceEntered() {
         var rotation = Quaternion.Euler (rnd.Next(0,360), rnd.Next(0,360), rnd.Next(0,360));
         ResourceDie die = (ResourceDie)Instantiate(dieModel, DiceExit.transform.position, Quaternion.identity * rotation);
         die.GetComponent<Rigidbody>().velocity = this.throwSpeed;
-        die.onValue = this.onDiceValue;
     }
 
+    public void rollResources() {
+        for(int i = 0; i < diceToRoll; i++) {
+            ResourceDie die = (ResourceDie)Instantiate(dieModel, DiceEntry.transform.position, Quaternion.identity);
+        }
+    }
     
 }
