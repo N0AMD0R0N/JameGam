@@ -7,7 +7,7 @@ public class Node : MonoBehaviour
 	public Color hoverColor;
 	private Color startColor;
 	private Renderer rend;
-	private GameObject tower;
+	private GameObject tower = null;
 	public Vector3 positionOffset;
 
 
@@ -17,15 +17,17 @@ public class Node : MonoBehaviour
 		startColor = rend.material.color;
 	}
 
-	private void OnMouseDown()
+	private void OnMouseOver()
 	{
-		if (tower != null)
-		{
-			Debug.Log("Node is occupied by a tower, can't build");
-			return;
+		if(Input.GetMouseButtonDown(1) && tower) {
+			GameObject.Destroy(tower);
+			tower = null;
+		} else if (Input.GetMouseButtonDown(0) && !tower) {
+			GameObject towerToBuild = BuildManager.instance.GetTowerToBuild();
+			if(towerToBuild) {
+				tower = (GameObject)Instantiate(towerToBuild, transform.position + positionOffset, transform.rotation);
+			}
 		}
-		GameObject towerToBuild = BuildManager.instance.GetTowerToBuild();
-		tower = (GameObject)Instantiate(towerToBuild, transform.position + positionOffset, transform.rotation);
 	}
 
 	private void OnMouseEnter()

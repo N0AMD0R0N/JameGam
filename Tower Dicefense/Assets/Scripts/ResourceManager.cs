@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class ResourceManagement : MonoBehaviour
+public class ResourceManager : MonoBehaviour
 {
+    public int startingGold = 0;
+    public int startingGems = 0;
+    public int startingMana = 0;
     public ResourceBox manaBox;
     public ResourceBox goldBox;
     public ResourceBox gemBox;
@@ -18,6 +21,9 @@ public class ResourceManagement : MonoBehaviour
     {
         timeBetweenWaves = waveSpawner.timeBetweenWaves*5;
         countdown = timeBetweenWaves;
+        goldBox.value = startingGold;
+        gemBox.value = startingGems;
+        manaBox.value = startingMana;
     }
 
     // Update is called once per frame

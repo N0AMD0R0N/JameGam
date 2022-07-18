@@ -5,6 +5,7 @@ using UnityEngine;
 public class BuildManager : MonoBehaviour
 {
 	public static BuildManager instance;
+	public ResourceManager resourceManager;
 
 	private void Awake()
 	{
@@ -27,6 +28,12 @@ public class BuildManager : MonoBehaviour
 
 	public GameObject GetTowerToBuild()
 	{
-		return towerToBuild; 
+		var gold = towerToBuild.GetComponent<Purchasable>().Gold;
+		var gems = towerToBuild.GetComponent<Purchasable>().Gems;
+		var mana = towerToBuild.GetComponent<Purchasable>().Mana;
+		if(resourceManager.spendResources(gold, gems, mana)) {
+			return towerToBuild; 
+		}
+		return null;
 	}
 }

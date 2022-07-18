@@ -203,6 +203,21 @@ MonoBehaviour:
   targetEnemy: {fileID: 0}
   rangeTransform: {fileID: 1343290126155658816}
   firePoint: {fileID: 6330689221756563486}
+--- !u!114 &4409152887615164300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735076271202770101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa1d08d5753d6c448ce95400ea34e19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Gold: 15
+  Gems: 3
+  Mana: 2
 --- !u!1 &2258890499258520448 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: a2ec5e377c00c6f4395b7c436d2d3f65,
