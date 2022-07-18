@@ -17,7 +17,7 @@ public class DiceEntered : MonoBehaviour
         
     }
 
-    //Upon collision with another GameObject, this GameObject will reverse direction
+    //Upon collision with another GameObject
     private void OnTriggerEnter(Collider other)
     {
         Destroy(other.gameObject);
