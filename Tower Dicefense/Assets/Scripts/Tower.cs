@@ -18,6 +18,8 @@ public class Tower : MonoBehaviour
 	public Transform targetEnemy = null;
 	public Transform rangeTransform;
 	public Transform firePoint;
+	public GameObject rangeHalo;
+	private Renderer haloRenderer;
 
 	private void OnDrawGizmosSelected()
 	{
@@ -29,6 +31,8 @@ public class Tower : MonoBehaviour
 	void Start()
     {
 		InvokeRepeating("updateTarget", 0f, 0.5f);
+		haloRenderer = rangeHalo.GetComponent<Renderer>();
+		haloRenderer.enabled = false;
     }
 
 	private void updateTarget()
@@ -87,4 +91,15 @@ public class Tower : MonoBehaviour
 
 		fireCountdown -= Time.deltaTime;
     }
+
+	private void OnMouseEnter()
+	{
+		Debug.Log("Zinga");
+		haloRenderer.enabled = true;
+	}
+
+	private void OnMouseExit()
+	{
+		haloRenderer.enabled = false;
+	}
 }
