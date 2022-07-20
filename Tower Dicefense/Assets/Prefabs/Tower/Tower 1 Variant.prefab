@@ -415,6 +415,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8161898950302513556}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &2689591464838471946
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9044787210475734213}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 2
+  m_Height: 20
+  m_Direction: 1
+  m_Center: {x: 0, y: 7, z: 0}
 --- !u!108 &2329971284653867993
 Light:
   m_ObjectHideFlags: 0
@@ -510,7 +524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 5
-  fireRate: 4
+  fireRate: 6
   fireCountdown: 0
   projectilePrefab: {fileID: 7593847604879869050, guid: 46cb0b01820f9e04e9ecf300472a5a45,
     type: 3}
@@ -533,17 +547,3 @@ MonoBehaviour:
   Gold: 30
   Gems: 5
   Mana: 8
---- !u!136 &2689591464838471946
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9044787210475734213}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 2
-  m_Height: 20
-  m_Direction: 1
-  m_Center: {x: 0, y: 7, z: 0}
