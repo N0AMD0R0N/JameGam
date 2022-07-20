@@ -5,6 +5,7 @@ using UnityEngine;
 public class BuildManager : MonoBehaviour
 {
 	public static BuildManager instance;
+	public TowerCollection[] towerCollections;
 	public ResourceManager resourceManager;
 
 	private void Awake()
@@ -20,6 +21,10 @@ public class BuildManager : MonoBehaviour
 
 	private void Start()
 	{
+		foreach(TowerCollection collection in  towerCollections)
+		{
+			collection.OnSelect = onSelection;
+		}
 		towerToBuild = standardTowerToBuildPrefab;
 	}
 
@@ -35,5 +40,14 @@ public class BuildManager : MonoBehaviour
 			return towerToBuild; 
 		}
 		return null;
+	}
+
+	private void onSelection(TowerCollection selectedCollection) {
+		foreach(TowerCollection collection in  towerCollections)
+		{
+			collection.selected = false;
+		}
+		selectedCollection.selected = true;
+		towerToBuild = selectedCollection.tower;
 	}
 }
