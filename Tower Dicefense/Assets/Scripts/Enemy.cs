@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
 	private int waypointIndex = 0;
 	public Vector3 facingDirection;
 	public Quaternion lookRotation;
+	public Action OnDestroyAction;
 
     // Start is called before the first frame update
     void Start()
@@ -46,5 +47,10 @@ public class Enemy : MonoBehaviour
 		}
 		waypointIndex++;
 		targetWaypoint = Waypoints.waypoints[waypointIndex];
+	}
+
+	private void OnDestroy()
+	{
+		if(this.OnDestroyAction != null) this.OnDestroyAction();
 	}
 }

@@ -17,7 +17,6 @@ public class TowerCollection : MonoBehaviour
     private void OnMouseOver()
 	{
 		if(Input.GetMouseButtonDown(0)) {
-            Debug.Log("AAAAAAh!!!");
             if(selected) {
                 selected = false;
             } else {

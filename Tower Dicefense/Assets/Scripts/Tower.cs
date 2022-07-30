@@ -94,7 +94,6 @@ public class Tower : MonoBehaviour
 
 	private void OnMouseEnter()
 	{
-		Debug.Log("Zinga");
 		haloRenderer.enabled = true;
 	}
 
